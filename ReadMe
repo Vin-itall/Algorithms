@@ -1,0 +1,16 @@
+Problem Statement:
+implement dijkstra's algorithm to find shorted path between A and E in the following graph
+
+Nodes - distance
+
+A B 10
+
+B C 5
+
+A D 15
+
+C E 20
+
+D E 15
+
+B E 35 
