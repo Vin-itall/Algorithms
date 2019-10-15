@@ -2,7 +2,7 @@ Problem Statement:
 
 i. Dijkstra's Algorithm
 
-  implement dijkstra's algorithm, BFS and DFS. Find shortest path between A and E in the following graph using Dijikstra's.
+    implement dijkstra's algorithm, BFS and DFS. Find shortest path between A and E in the following graph using Dijikstra's.
 
     Nodes - distance
 
