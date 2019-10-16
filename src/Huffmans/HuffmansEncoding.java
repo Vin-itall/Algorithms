@@ -3,8 +3,6 @@ package Huffmans;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
 import java.util.TreeMap;
 
 public class HuffmansEncoding {
@@ -38,7 +36,6 @@ public class HuffmansEncoding {
 			Node X =T;
 			String Code = "";
 			StringBuilder Reverse = new StringBuilder();
-			System.out.println(X.C);
 			do 
 			{
 				if(T.isLeft)
@@ -65,7 +62,6 @@ public class HuffmansEncoding {
 		ArrayList<Node> PrimaryNodes = new ArrayList<Node>();
 		ArrayList<Node> TreeNodes = new ArrayList<Node>();
 		Node Current = null;
-		Node Previous = null;
 		ft.forEach((k,v)->PrimaryNodes.add(new Node(k,v)));
 		Collections.sort(PrimaryNodes,Node.frequencyComp);
 		while(PrimaryNodes.size() > 1)
@@ -104,8 +100,6 @@ public class HuffmansEncoding {
 				Current = P;
 				temp1.parent = P;
 				temp2.parent = P;
-				Previous = Current;
-				
 				PrimaryNodes.add(P);
 				if(temp1.C!=null)
 				{
@@ -123,7 +117,7 @@ public class HuffmansEncoding {
 	
 	public static void main(String Args[])
 	{
-		String message = "BCCABBDDAECCBBAEDDCC";
+		String message = "GO GO GOPHERS";
 		TreeMap<Character,Integer> ft = new TreeMap<Character,Integer>();
 		ft = Frequency(message);
 		mergePatternTree(ft);
