@@ -70,7 +70,7 @@ public class HuffmansEncoding {
 			Node temp2 = PrimaryNodes.get(1);
 			PrimaryNodes.remove(0);
 			PrimaryNodes.remove(0);
-			if(Current==null || (Current.frequency>temp1.frequency && Current.frequency>temp2.frequency))
+			if(Current == null || (Current.frequency>temp1.frequency && Current.frequency>temp2.frequency))
 			{
 				Node P = new Node(temp1.frequency + temp2.frequency);
 				P.left = temp1;
