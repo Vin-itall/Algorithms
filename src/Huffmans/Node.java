@@ -10,6 +10,7 @@ public class Node{
 	Node parent;
 	boolean isLeft;
 	boolean isRight;
+	boolean isParent;
 	public Node(char Ch,int f) {
 		C=Ch;
 		frequency = f;
@@ -18,7 +19,9 @@ public class Node{
 		parent = null;
 		isLeft =false;
 		isRight = false;
+		isParent = false;
 	}
+	
 	
 	public Node(int f)
 	{
@@ -29,6 +32,7 @@ public class Node{
 		parent = null;
 		isLeft = false;
 		isRight = false;
+		isParent = false;
 	}
 	  public static Comparator<Node> frequencyComp = new Comparator<Node>() {
 
