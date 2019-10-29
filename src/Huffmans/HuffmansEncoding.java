@@ -117,7 +117,7 @@ public class HuffmansEncoding {
 	
 	public static void main(String Args[])
 	{
-		String message = "GO GO GOPHERS";
+		String message = "BCCABBDDAECCBBAEDDCC";
 		TreeMap<Character,Integer> ft = new TreeMap<Character,Integer>();
 		ft = Frequency(message);
 		mergePatternTree(ft);
