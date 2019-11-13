@@ -29,6 +29,7 @@ public void intialize(int L)
 	 AdjMat=new int[Vertices.size()][Vertices.size()];
 	 this.matrix();
 }	
+
 public void matrix()
 {	
 	for(int row=0;row<Vertices.size();row++)
@@ -39,6 +40,7 @@ public void matrix()
 		}
 	}
 }
+
 public void addEdges(int K)
 { 
 	for(int k=0;k<K;k++)
@@ -59,11 +61,13 @@ public void addEdges(int K)
 	}
 	
 }
+
 public void addEdge(int a,int b,int X)
 	{		
 			AdjMat[a][b]=1*X;
 			//AdjMat[b][a]=1; /*For Bidirectional Graph Uncomment*/
 	}
+
 public void DFS(int Start,int End)
 {Vertex Strt=null;
 Vertex Ed=null;
@@ -105,6 +109,7 @@ Vertex Ed=null;
 		}
 		}	
 }
+
 public String BFS(int Start,int End)
 {	
 	System.out.println("-------------------BFS----------------------");
@@ -146,6 +151,7 @@ public String BFS(int Start,int End)
 	}
 	return "////Doesnt Have Path////";
 }
+
 public void Dijkstras(int Start,int End)
 {
 	System.out.println("-------------------Dijkstras---------------------");
@@ -229,6 +235,7 @@ public void Display(int B)
 		System.out.print("\n");
 	}
 }
+
 public static void main(String Args[])
 {
 	Graph graph=new Graph();
