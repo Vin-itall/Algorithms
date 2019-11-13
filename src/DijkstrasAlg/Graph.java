@@ -62,7 +62,7 @@ public void addEdges(int K)
 public void addEdge(int a,int b,int X)
 	{		
 			AdjMat[a][b]=1*X;
-			//AdjMat[b][a]=1; /*For Unidirectional Graph Uncomment*/
+			//AdjMat[b][a]=1; /*For Bidirectional Graph Uncomment*/
 	}
 public void DFS(int Start,int End)
 {Vertex Strt=null;
@@ -148,6 +148,7 @@ public String BFS(int Start,int End)
 }
 public void Dijkstras(int Start,int End)
 {
+	System.out.println("-------------------Dijkstras---------------------");
 	Vertex Strt=null;
 	Vertex Ed=null;
 		for(int j=NoV-1;j>=0;j--)
@@ -216,12 +217,12 @@ public void Dijkstras(int Start,int End)
 		System.out.print(DjPath);
 }
 
-public void Display()
+public void Display(int B)
 {
 	System.out.println("--------------Adjacency Matrix--------------");
-	for(int row=0;row<5;row++)
+	for(int row=0;row<B;row++)
 	{
-		for(int col=0;col<5;col++)
+		for(int col=0;col<B;col++)
 		{
 			System.out.print(" "+AdjMat[row][col]+" ");
 		}
@@ -231,17 +232,18 @@ public void Display()
 public static void main(String Args[])
 {
 	Graph graph=new Graph();
-	System.out.println("No. of Vertices");
-	Scanner Sd=new Scanner(System.in);
- int H=Sd.nextInt();
-	//System.out.println("No. of Edges");
-	//int B=Sd.nextInt();
-	
-	graph.intialize(H);
+//	System.out.println("No. of Vertices");
+//	Scanner Sd=new Scanner(System.in);
+//	int H=Sd.nextInt();
+//	System.out.println("No. of Edges");
+//	int B=Sd.nextInt();
+//	
+//	graph.intialize(H);
 //	graph.addEdges(B);
-	Sd.close();
-//graph.addEdges();
+//	Sd.close();
 	
+	
+	graph.intialize(6);
 	graph.addEdge(0,1,3);
 	graph.addEdge(1,2,6); 
 	graph.addEdge(1,3,15);
@@ -254,11 +256,11 @@ public static void main(String Args[])
 
 		
 	
-	graph.Display();
-/*	System.out.println("-------------------DFS---------------------");
+	graph.Display(6);
+	System.out.println("-------------------DFS---------------------");
 	graph.DFS(0,4);
 	String S=graph.BFS(0,4);
-	System.out.println(S); */
-	graph.Dijkstras(0,5);
+	System.out.println(S);
+	graph.Dijkstras(0,4);
 }
 }
